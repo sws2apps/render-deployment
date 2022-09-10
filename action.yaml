@@ -1,0 +1,16 @@
+name: 'Render Deployment'
+author: 'Scheduling Workbox System <sws2apps.notification@gmail.com>'
+description: 'A GitHub Action to trigger and track deployment in Render'
+inputs:
+  serviceId:
+    description: 'The Service ID of your Render service'
+    required: true
+  apiKey:
+    description: 'Your personal API key to interact with Render'
+    required: false
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+branding:
+  icon: 'play-circle'
+  color: 'purple'

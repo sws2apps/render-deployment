@@ -1,0 +1,33 @@
+{
+  "name": "render-deployment",
+  "description": "A GitHub Action to trigger deployment in Render.",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "homepage": "https://github.com/sws2apps/render-deployment#readme",
+  "author": "Scheduling Workbox System <sws2apps.notification@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/sws2apps/render-deployment/issues",
+    "email": "sws2apps.notification@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sws2apps/render-deployment.git"
+  },
+  "scripts": {
+    "build": "ncc build src/index.js --license licenses.txt"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@vercel/ncc": "^0.33.4"
+  },
+  "dependencies": {
+    "@actions/core": "^1.9.1",
+    "@actions/exec": "^1.1.1",
+    "dotenv": "^16.0.2",
+    "node-fetch": "^3.2.10"
+  }
+}

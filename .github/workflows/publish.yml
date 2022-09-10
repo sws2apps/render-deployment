@@ -1,0 +1,33 @@
+name: CD
+
+on:
+  workflow_dispatch:
+
+permissions: read-all
+
+jobs:
+  publish_marketplace:
+    name: Publish Action to Marketplace
+    if: ${{ github.repository == 'sws2apps/firebase-deployment' && github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout for release preparation
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
+        with:
+          ref: main
+          persist-credentials: false
+
+      - name: Use Node.js current version
+        uses: actions/setup-node@17f8bd926464a1afa4c6a11669539e9c1ba77048
+        with:
+          node-version: current
+
+      - name: Install package dependencies
+        run: npm ci
+
+      - name: Run Semantic Release to version and publish the action
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

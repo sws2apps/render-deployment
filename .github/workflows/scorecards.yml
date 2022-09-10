@@ -1,0 +1,35 @@
+name: Scorecards
+
+on:
+  push:
+    branches: [main]
+
+permissions: read-all
+
+jobs:
+  scorecards:
+    name: Scorecards Analysis
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
+
+    steps:
+      - name: 'Checkout code'
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
+        with:
+          persist-credentials: false
+
+      - name: 'Run analysis'
+        uses: ossf/scorecard-action@c1aec4ac820532bab364f02a81873c555a0ba3a1
+        with:
+          results_file: results.sarif
+          results_format: sarif
+          repo_token: ${{ secrets.SCORECARD_READ_TOKEN }}
+          publish_results: true
+
+      - name: 'Upload to code-scanning'
+        uses: github/codeql-action/upload-sarif@7502d6e991ca767d2db617bfd823a1ed925a0d59
+        with:
+          sarif_file: results.sarif
