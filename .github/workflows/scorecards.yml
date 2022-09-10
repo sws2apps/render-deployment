@@ -30,6 +30,6 @@ jobs:
           publish_results: true
 
       - name: 'Upload to code-scanning'
-        uses: github/codeql-action/upload-sarif@7502d6e991ca767d2db617bfd823a1ed925a0d59
+        uses: github/codeql-action/upload-sarif@b398f525a5587552e573b247ac661067fafa920b
         with:
           sarif_file: results.sarif
