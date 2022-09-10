@@ -8,7 +8,7 @@ permissions: read-all
 jobs:
   publish_marketplace:
     name: Publish Action to Marketplace
-    if: ${{ github.repository == 'sws2apps/firebase-deployment' && github.ref == 'refs/heads/main' }}
+    if: ${{ github.repository == 'sws2apps/render-deployment' && github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
 
     steps:
