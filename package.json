@@ -27,7 +27,7 @@
   "dependencies": {
     "@actions/core": "^1.9.1",
     "@actions/exec": "^1.1.1",
-    "dotenv": "^16.0.2",
+    "dotenv": "^16.0.3",
     "node-fetch": "^3.2.10"
   }
 }
