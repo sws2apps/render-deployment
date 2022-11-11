@@ -8,6 +8,10 @@ inputs:
   apiKey:
     description: 'Your personal API key to interact with Render'
     required: false
+  multiple:
+    description: 'Specify if multiple deployment is allowed'
+    required: false
+    default: true
 runs:
   using: 'node16'
   main: 'dist/index.js'
