@@ -19,6 +19,9 @@ const run = async () => {
 		return;
 	}
 
+	const multipleInput = core.getInput('multiple') || process.env.multiple;
+	const multiple = multipleInput === 'true' ? true : false;
+
 	try {
 		let res;
 		let data;
@@ -30,7 +33,7 @@ const run = async () => {
 			},
 		};
 
-		// check if there is a deployment in progress, and stop
+		// check if there is a deployment in progress
 		res = await fetch(
 			`https://api.render.com/v1/services/${serviceId}/deploys?limit=20`,
 			{ method: 'GET', ...options }
@@ -47,8 +50,9 @@ const run = async () => {
 		)
 			? true
 			: false;
-
-		if (hasInProgressBuild) {
+		
+		// check if multiple is set to false if there is active build
+		if (!multiple && hasInProgressBuild) {
 			core.setFailed(
 				'Your Render Service has an active build in progress. Wait for that to complete before deploying again'
 			);
