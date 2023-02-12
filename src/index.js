@@ -19,7 +19,7 @@ const run = async () => {
 		return;
 	}
 
-	const multipleInput = core.getInput('multiple') || process.env.multiple;
+	const multipleInput = core.getInput('multipleDeployment') || process.env.multipleDeployment;
 	const multiple = multipleInput === 'true' ? true : false;
 
 	try {
@@ -34,10 +34,7 @@ const run = async () => {
 		};
 
 		// check if there is a deployment in progress
-		res = await fetch(
-			`https://api.render.com/v1/services/${serviceId}/deploys?limit=20`,
-			{ method: 'GET', ...options }
-		);
+		res = await fetch(`https://api.render.com/v1/services/${serviceId}/deploys?limit=20`, { method: 'GET', ...options });
 		data = await res.json();
 
 		if (res.status !== 200) {
@@ -45,25 +42,16 @@ const run = async () => {
 			return;
 		}
 
-		const hasInProgressBuild = data.find(
-			(instance) => instance.deploy.status === 'build_in_progress'
-		)
-			? true
-			: false;
-		
+		const hasInProgressBuild = data.find((instance) => instance.deploy.status === 'build_in_progress') ? true : false;
+
 		// check if multiple is set to false if there is active build
 		if (!multiple && hasInProgressBuild) {
-			core.setFailed(
-				'Your Render Service has an active build in progress. Wait for that to complete before deploying again'
-			);
+			core.setFailed('Your Render Service has an active build in progress. Wait for that to complete before deploying again');
 			return;
 		}
 
 		// triggering deployment
-		res = await fetch(
-			`https://api.render.com/v1/services/${serviceId}/deploys`,
-			{ method: 'POST', ...options }
-		);
+		res = await fetch(`https://api.render.com/v1/services/${serviceId}/deploys`, { method: 'POST', ...options });
 		data = await res.json();
 
 		if (res.status !== 201) {
@@ -80,14 +68,16 @@ const run = async () => {
 		core.info('Starting deployment in Render ...');
 
 		while (!isCompleted && !hasError) {
-			res = await fetch(
-				`https://api.render.com/v1/services/${serviceId}/deploys/${deployId}`,
-				{ method: 'GET', ...options }
-			);
+			res = await fetch(`https://api.render.com/v1/services/${serviceId}/deploys/${deployId}`, { method: 'GET', ...options });
 			data = await res.json();
 
 			if (res.status !== 200) {
 				core.error(`An error occured. Reason: ${data.message}`);
+				hasError = true;
+			}
+
+			if (data.status === 'update_failed' || data.status === 'build_failed' || data.status === 'canceled') {
+				core.error(`Something went wrong. Login to Render Dashboard to learn more about the issue.`);
 				hasError = true;
 			}
 

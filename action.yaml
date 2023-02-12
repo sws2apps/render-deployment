@@ -8,8 +8,8 @@ inputs:
   apiKey:
     description: 'Your personal API key to interact with Render'
     required: false
-  multiple:
-    description: 'Specify if multiple deployment is allowed'
+  multipleDeployment:
+    description: 'Specify if having multiple deployment is allowed'
     required: false
     default: true
 runs:
