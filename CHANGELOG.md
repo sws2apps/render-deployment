@@ -1,3 +1,17 @@
+# [1.2.0](https://github.com/sws2apps/render-deployment/compare/v1.1.0...v1.2.0) (2023-02-12)
+
+
+### Bug Fixes
+
+* **actions:** fail this action on some status messages ([74f150f](https://github.com/sws2apps/render-deployment/commit/74f150f45f501e56136696a08bedb913b957ae00))
+
+
+### Features
+
+* **deps:** bump @semantic-release/changelog from 6.0.1 to 6.0.2 ([73639e5](https://github.com/sws2apps/render-deployment/commit/73639e5147f570e0959508032494d8daee876862))
+* **deps:** bump @vercel/ncc from 0.34.0 to 0.36.0 ([8ebe878](https://github.com/sws2apps/render-deployment/commit/8ebe878aead307b48b389153bf92766f0e73c026))
+* **deps:** bump @vercel/ncc from 0.36.0 to 0.36.1 ([fe6cd9c](https://github.com/sws2apps/render-deployment/commit/fe6cd9cf21851430d4e2326a6ab5fc21083d4eb9))
+
 # [1.1.0](https://github.com/sws2apps/render-deployment/compare/v1.0.0...v1.1.0) (2022-11-11)
 
 
