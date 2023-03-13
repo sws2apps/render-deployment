@@ -28,6 +28,6 @@
     "@actions/core": "^1.10.0",
     "@actions/exec": "^1.1.1",
     "dotenv": "^16.0.3",
-    "node-fetch": "^3.2.10"
+    "node-fetch": "^3.3.1"
   }
 }
