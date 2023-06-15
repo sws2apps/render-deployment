@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/sws2apps/render-deployment/compare/v1.2.0...v1.3.0) (2023-06-15)
+
+
+### Features
+
+* **actions:** validate response when checking active deployment ([2619917](https://github.com/sws2apps/render-deployment/commit/261991795f627d139361f38e45a8b279aadff160))
+* **deps:** bump @semantic-release/changelog from 6.0.2 to 6.0.3 ([ed92b3b](https://github.com/sws2apps/render-deployment/commit/ed92b3b34a859f372cbcc55a2e0c192d9c3fff3e))
+* **deps:** bump dotenv from 16.0.3 to 16.1.0 ([b7651e0](https://github.com/sws2apps/render-deployment/commit/b7651e0bb1dd491c73878c25c3cdbf6792d917ca))
+* **deps:** bump dotenv from 16.1.0 to 16.1.3 ([3613c30](https://github.com/sws2apps/render-deployment/commit/3613c308bf1c9121bcb9a6015163909c2e207164))
+* **deps:** bump dotenv from 16.1.3 to 16.1.4 ([90ab6c7](https://github.com/sws2apps/render-deployment/commit/90ab6c793bd5950a6555b4f02982af1ac307b6e9))
+* **deps:** bump node-fetch from 3.3.0 to 3.3.1 ([4c68b89](https://github.com/sws2apps/render-deployment/commit/4c68b89f763d7b88df04588c910262ec7fa94f8f))
+
 # [1.2.0](https://github.com/sws2apps/render-deployment/compare/v1.1.0...v1.2.0) (2023-02-12)
 
 
