@@ -37,6 +37,11 @@ const run = async () => {
 		res = await fetch(`https://api.render.com/v1/services/${serviceId}/deploys?limit=20`, { method: 'GET', ...options });
 		data = await res.json();
 
+		if (!data) {
+			core.setFailed(`This operation did not succeed. Please check if the serviceId and apiKey inputs were correclty set`);
+			return;
+		}
+
 		if (res.status !== 200) {
 			core.setFailed(`This operation did not succeed. Reason: ${data.message}`);
 			return;
