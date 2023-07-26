@@ -1,3 +1,12 @@
+# [1.4.0](https://github.com/sws2apps/render-deployment/compare/v1.3.0...v1.4.0) (2023-07-26)
+
+
+### Features
+
+* **deps:** bump dotenv from 16.1.4 to 16.3.0 ([930c04e](https://github.com/sws2apps/render-deployment/commit/930c04e5253874590dc978e6474bb49417a080a9))
+* **deps:** bump dotenv from 16.3.0 to 16.3.1 ([6f6bb28](https://github.com/sws2apps/render-deployment/commit/6f6bb28c7e8fa04c19cb2b201643d0ff47889e01))
+* **deps:** bump node-fetch from 3.3.1 to 3.3.2 ([40815c5](https://github.com/sws2apps/render-deployment/commit/40815c5a05ee45a0b9adc35285f01462f47de29e))
+
 # [1.3.0](https://github.com/sws2apps/render-deployment/compare/v1.2.0...v1.3.0) (2023-06-15)
 
 
