@@ -1,7 +1,7 @@
 {
 	"name": "render-deployment",
 	"description": "A GitHub Action to trigger deployment in Render.",
-	"version": "1.4.0",
+	"version": "1.5.0",
 	"private": true,
 	"type": "module",
 	"homepage": "https://github.com/sws2apps/render-deployment#readme",

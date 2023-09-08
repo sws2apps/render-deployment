@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/sws2apps/render-deployment/compare/v1.4.0...v1.5.0) (2023-09-08)
+
+
+### Features
+
+* **deps:** bump @vercel/ncc from 0.36.1 to 0.38.0 ([9950a96](https://github.com/sws2apps/render-deployment/commit/9950a9635d3e1104f53bc62a5011caeacdb16f26))
+
 # [1.4.0](https://github.com/sws2apps/render-deployment/compare/v1.3.0...v1.4.0) (2023-07-26)
 
 
