@@ -1,3 +1,11 @@
+# [1.6.0](https://github.com/sws2apps/render-deployment/compare/v1.5.0...v1.6.0) (2023-09-25)
+
+
+### Features
+
+* **actions:** update to use node20 ([ea6affb](https://github.com/sws2apps/render-deployment/commit/ea6affb389fbf113337fb2b05be9f91591d405da))
+* **deps:** bump @actions/core from 1.10.0 to 1.10.1 ([071d083](https://github.com/sws2apps/render-deployment/commit/071d0834401b701adfe154e947b524d2588b128b))
+
 # [1.5.0](https://github.com/sws2apps/render-deployment/compare/v1.4.0...v1.5.0) (2023-09-08)
 
 
