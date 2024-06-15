@@ -1,3 +1,18 @@
+# [1.7.0](https://github.com/sws2apps/render-deployment/compare/v1.6.0...v1.7.0) (2024-06-15)
+
+
+### Features
+
+* **deps:** bump @vercel/ncc from 0.38.0 to 0.38.1 ([482bf52](https://github.com/sws2apps/render-deployment/commit/482bf526daacb3264e2271a743499195e3e8f84b))
+* **deps:** bump braces from 3.0.2 to 3.0.3 ([575fa01](https://github.com/sws2apps/render-deployment/commit/575fa01d0d6a0c11267db1e05652de491558ed98))
+* **deps:** bump dotenv from 16.3.1 to 16.3.2 ([1e934d1](https://github.com/sws2apps/render-deployment/commit/1e934d1021c4334f63b2bdd8056eb37242ac2539))
+* **deps:** bump dotenv from 16.3.2 to 16.4.1 ([59d7a52](https://github.com/sws2apps/render-deployment/commit/59d7a526d5ab4d8ff611e963e3ef6bb1a5230178))
+* **deps:** bump dotenv from 16.4.1 to 16.4.4 ([d72d999](https://github.com/sws2apps/render-deployment/commit/d72d999c04ec8b66aeae80ccaf2fe21fa5001f6f))
+* **deps:** bump dotenv from 16.4.4 to 16.4.5 ([6dce75a](https://github.com/sws2apps/render-deployment/commit/6dce75aec64103d7be0871fd7ee1536d469aff65))
+* **deps:** bump express from 4.18.2 to 4.18.3 ([d573c53](https://github.com/sws2apps/render-deployment/commit/d573c532e485c7cd58fa62cb065d88e0875e477c))
+* **deps:** bump express from 4.18.3 to 4.19.1 ([6b9b862](https://github.com/sws2apps/render-deployment/commit/6b9b86229daf8d134ab9452de4229c5f4c0ab0b6))
+* **deps:** bump express from 4.19.1 to 4.19.2 ([2d542da](https://github.com/sws2apps/render-deployment/commit/2d542da4859c0f749ca832ce52004cce2fe47733))
+
 # [1.6.0](https://github.com/sws2apps/render-deployment/compare/v1.5.0...v1.6.0) (2023-09-25)
 
 
