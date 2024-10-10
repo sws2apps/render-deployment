@@ -1,3 +1,15 @@
+# [1.8.0](https://github.com/sws2apps/render-deployment/compare/v1.7.0...v1.8.0) (2024-10-10)
+
+
+### Features
+
+* **deps:** bump @actions/core from 1.10.1 to 1.11.0 ([d17cff9](https://github.com/sws2apps/render-deployment/commit/d17cff9f22c2d6a55b9684d01c0ff2a0011de040))
+* **deps:** bump @actions/core from 1.11.0 to 1.11.1 ([4c56fab](https://github.com/sws2apps/render-deployment/commit/4c56fab71c8f42c1f3c4ca3a70cb05852e72229a))
+* **deps:** bump @vercel/ncc from 0.38.1 to 0.38.2 ([e7bcafc](https://github.com/sws2apps/render-deployment/commit/e7bcafceac2d7c561da62eb23d8628981a6c46d4))
+* **deps:** bump express from 4.19.2 to 4.20.0 ([663ba74](https://github.com/sws2apps/render-deployment/commit/663ba74920df3bb394efab9525ea5adf13696ddf))
+* **deps:** bump express from 5.0.0 to 5.0.1 ([ec72ad3](https://github.com/sws2apps/render-deployment/commit/ec72ad3ae7683e711e72e472bd5acc17aa2eece2))
+* **deps:** bump send and express ([8dcb759](https://github.com/sws2apps/render-deployment/commit/8dcb759848bd1b9e47594de5f54733835994421c))
+
 # [1.7.0](https://github.com/sws2apps/render-deployment/compare/v1.6.0...v1.7.0) (2024-06-15)
 
 
