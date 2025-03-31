@@ -28,7 +28,7 @@
 		"@semantic-release/exec": "^7.0.3",
 		"@semantic-release/git": "^10.0.1",
 		"@vercel/ncc": "^0.38.3",
-		"express": "^5.0.1"
+		"express": "^5.1.0"
 	},
 	"dependencies": {
 		"@actions/core": "^1.11.1",
