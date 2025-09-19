@@ -31,7 +31,7 @@ runs:
         RENDER_API_KEY: ${{ inputs.apiKey }}
         CI: true
       run: |
-        render deploys create ${{ inputs.serviceId }} --output text --confirm
+        render deploys create ${{ inputs.serviceId }} --output text --confirm --wait
 
 branding:
   icon: 'play-circle'
