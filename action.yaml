@@ -27,7 +27,7 @@ runs:
     - name: Install Render CLI
       shell: bash
       run: |
-        curl -fsSL https://raw.githubusercontent.com/render-oss/cli/refs/tags/v${{ inputs.cli-version }}/bin/install.sh| sh
+        curl -fsSL https://raw.githubusercontent.com/render-oss/cli/refs/tags/v${{ inputs.cli-version }}/bin/install.sh | sh
 
     - name: Trigger deploy with Render CLI
       shell: bash
