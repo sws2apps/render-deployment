@@ -7,14 +7,36 @@ inputs:
     required: true
   apiKey:
     description: 'Your personal API key to interact with Render'
+    required: true
+  node-version:
+    description: 'NodeJS Version Spec of the version to use. Examples: 12.x, 10.15.1, >=10.15.0., lts/Jod'
     required: false
-  multipleDeployment:
-    description: 'Specify if having multiple deployment is allowed'
+    default: 'lts/Jod'
+  cli-version:
+    description: 'Render CLI version from GitHub release'
     required: false
-    default: true
+    default: '2.2.0'
 runs:
-  using: 'node20'
-  main: 'dist/index.js'
+  using: 'composite'
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444
+      with:
+        node-version: ${{ inputs.node-version }}
+
+    - name: Install Render CLI
+      shell: bash
+      run: |
+        curl -fsSL https://raw.githubusercontent.com/render-oss/cli/refs/tags/v${{ inputs.cli-version }}/bin/install.sh | sh
+
+    - name: Trigger deploy with Render CLI
+      shell: bash
+      env:
+        RENDER_API_KEY: ${{ inputs.apiKey }}
+        CI: true
+      run: |
+        render deploys create ${{ inputs.serviceId }} --output text --confirm --wait
+
 branding:
   icon: 'play-circle'
   color: 'purple'
