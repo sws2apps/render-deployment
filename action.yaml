@@ -23,9 +23,7 @@ runs:
     - name: Install Render CLI
       shell: bash
       run: |
-        curl -L https://github.com/render-oss/cli/releases/download/v2.2.0/cli_2.2.0_linux_amd64.zip -o render.zip
-        unzip render.zip
-        sudo mv cli_v1.1.0 /usr/local/bin/render
+        curl -fsSL https://raw.githubusercontent.com/render-oss/cli/refs/heads/main/bin/install.sh | sh
 
     - name: Trigger deploy with Render CLI
       shell: bash
