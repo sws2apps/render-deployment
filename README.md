@@ -23,6 +23,6 @@ jobs:
         with:
           serviceId: ${{ secrets.RENDER_SERVICE_ID }}
           apiKey: ${{ secrets.RENDER_API_KEY }}
-          node-version: lts/Iron #optional
+          node-version: lts/Jod #optional
           cli-version: 2.2.0 #optional
 ```
