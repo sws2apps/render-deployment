@@ -12,6 +12,10 @@ inputs:
     description: 'NodeJS Version Spec of the version to use. Examples: 12.x, 10.15.1, >=10.15.0.'
     required: false
     default: 'current'
+  cli-version:
+    description: 'Render CLI version from GitHub release'
+    required: false
+    default: '2.2.0'
 runs:
   using: 'composite'
   steps:
@@ -23,7 +27,7 @@ runs:
     - name: Install Render CLI
       shell: bash
       run: |
-        curl -fsSL https://raw.githubusercontent.com/render-oss/cli/refs/heads/main/bin/install.sh | sh
+        curl -fsSL https://raw.githubusercontent.com/render-oss/cli/refs/tags/v${{ inputs.cli-version }}/bin/install.sh| sh
 
     - name: Trigger deploy with Render CLI
       shell: bash
