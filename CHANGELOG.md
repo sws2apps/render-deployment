@@ -1,3 +1,27 @@
+# [2.0.0](https://github.com/sws2apps/render-deployment/compare/v1.8.0...v2.0.0) (2025-09-19)
+
+
+### Features
+
+* **action:** use render cli ([1b92b91](https://github.com/sws2apps/render-deployment/commit/1b92b91e44aaed52f1c4c611e1f394fe4fc4153f))
+* **deps:** bump @semantic-release/exec from 6.0.3 to 7.0.0 ([b9d3e79](https://github.com/sws2apps/render-deployment/commit/b9d3e7982c0772917470865ef91f46eb1ca01e26))
+* **deps:** bump @semantic-release/exec from 7.0.0 to 7.0.3 ([6226cd9](https://github.com/sws2apps/render-deployment/commit/6226cd9ef87b6ed0a4c593cd777419f9e6ae5183))
+* **deps:** bump @semantic-release/exec from 7.0.3 to 7.1.0 ([f1fdfc0](https://github.com/sws2apps/render-deployment/commit/f1fdfc0c9410ad4c4c6c688d064d9a86c0e63e59))
+* **deps:** bump @vercel/ncc from 0.38.2 to 0.38.3 ([25fae76](https://github.com/sws2apps/render-deployment/commit/25fae7603ab3299a9ba6183a09b6f282bcbdeba1))
+* **deps:** bump @vercel/ncc from 0.38.3 to 0.38.4 ([f0809c0](https://github.com/sws2apps/render-deployment/commit/f0809c06061bb82ce045a5c024ebff091c958d96))
+* **deps:** bump dotenv from 16.4.5 to 16.4.7 ([22a6d22](https://github.com/sws2apps/render-deployment/commit/22a6d226739b48fdfd5f52e736b1f7200d6b3388))
+* **deps:** bump dotenv from 16.4.7 to 16.5.0 ([2b022bf](https://github.com/sws2apps/render-deployment/commit/2b022bf97de3c3979bbb64cdd2c51de7ca6abf07))
+* **deps:** bump dotenv from 16.5.0 to 17.0.1 ([275826f](https://github.com/sws2apps/render-deployment/commit/275826f562f0b27029bda1df3efa67504920d441))
+* **deps:** bump dotenv from 17.0.1 to 17.2.0 ([e0fc598](https://github.com/sws2apps/render-deployment/commit/e0fc598ba32927ef79005e1fb5b39e4aa1404bb8))
+* **deps:** bump dotenv from 17.2.0 to 17.2.1 ([49f770c](https://github.com/sws2apps/render-deployment/commit/49f770c7ec3ac7d0d993acd17921be0e0f9919ac))
+* **deps:** bump dotenv from 17.2.1 to 17.2.2 ([5bfc66a](https://github.com/sws2apps/render-deployment/commit/5bfc66ad4a504971586c83f66ae7f271f73bcb5e))
+* **deps:** bump express from 5.0.1 to 5.1.0 ([25d334a](https://github.com/sws2apps/render-deployment/commit/25d334a608c49a24eaf3477668138a08b075cde3))
+
+
+### BREAKING CHANGES
+
+* **action:** This action now uses the Render CLI.
+
 # [1.8.0](https://github.com/sws2apps/render-deployment/compare/v1.7.0...v1.8.0) (2024-10-10)
 
 
