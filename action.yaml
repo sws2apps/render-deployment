@@ -8,13 +8,31 @@ inputs:
   apiKey:
     description: 'Your personal API key to interact with Render'
     required: false
-  multipleDeployment:
-    description: 'Specify if having multiple deployment is allowed'
+  node-version:
+    description: 'NodeJS Version Spec of the version to use. Examples: 12.x, 10.15.1, >=10.15.0.'
     required: false
-    default: true
+    default: 'current'
 runs:
-  using: 'node20'
-  main: 'dist/index.js'
+  using: 'composite'
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444
+      with:
+        node-version: ${{ inputs.node-version }}
+
+    - name: Install Render CLI
+      run: |
+        curl -L https://github.com/render-oss/cli/releases/download/v2.2.0/cli_2.2.0_linux_amd64.zip -o render.zip
+        unzip render.zip
+        sudo mv cli_v1.1.0 /usr/local/bin/render
+
+    - name: Trigger deploy with Render CLI
+      env:
+        RENDER_API_KEY: ${{ inputs.apiKey }}
+        CI: true
+      run: |
+        render deploys create ${{ inputs.serviceId }} --confirm
+
 branding:
   icon: 'play-circle'
   color: 'purple'
