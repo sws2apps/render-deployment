@@ -1,0 +1,34 @@
+{
+  "name": "render-deployment",
+  "description": "A GitHub Action to trigger deployment in Render.",
+  "version": "1.8.0",
+  "private": true,
+  "type": "module",
+  "homepage": "https://github.com/sws2apps/render-deployment#readme",
+  "author": "Scheduling Workbox System <sws2apps.notification@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/sws2apps/render-deployment/issues",
+    "email": "sws2apps.notification@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sws2apps/render-deployment.git"
+  },
+  "engines": {
+    "node": ">=22",
+    "npm": ">=10"
+  },
+  "scripts": {
+    "start-server": "node backend/index.js"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "express": "^5.0.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "node-fetch": "^3.3.2"
+  }
+}
