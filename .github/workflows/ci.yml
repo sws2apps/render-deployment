@@ -5,16 +5,13 @@ on:
     branches: [main, beta]
   workflow_dispatch:
 
-permissions: read-all
+permissions:
+  contents: read
 
 jobs:
   test_actions:
     name: Test actions
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: 'read'
-      id-token: 'write'
 
     steps:
       - name: Checkout for testing preparation

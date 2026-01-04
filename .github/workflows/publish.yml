@@ -3,20 +3,24 @@ name: CD
 on:
   workflow_dispatch:
 
-permissions: read-all
+permissions:
+  contents: read
 
 jobs:
   publish_marketplace:
     name: Publish Action to Marketplace
     if: ${{ github.repository == 'sws2apps/render-deployment' && github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
 
     steps:
       - name: Checkout for release preparation
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
         with:
           ref: main
-          persist-credentials: false
+          persist-credentials: true
 
       - name: Use Node.js current version
         uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f
@@ -29,5 +33,4 @@ jobs:
       - name: Run Semantic Release to version and publish the action
         run: npx semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
