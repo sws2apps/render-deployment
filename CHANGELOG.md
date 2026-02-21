@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/sws2apps/render-deployment/compare/v2.0.0...v2.1.0) (2026-02-21)
+
+
+### Features
+
+* **actions:** update node default version to lts/Krypton ([d2a3d45](https://github.com/sws2apps/render-deployment/commit/d2a3d45e39f3dc2f465f6f169f9205762f549a84))
+
 # [2.0.0](https://github.com/sws2apps/render-deployment/compare/v1.8.0...v2.0.0) (2025-09-19)
 
 
