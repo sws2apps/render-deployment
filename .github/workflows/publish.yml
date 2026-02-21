@@ -13,19 +13,18 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      id-token: write
 
     steps:
       - name: Checkout for release preparation
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           ref: main
-          persist-credentials: true
+          persist-credentials: false
 
       - name: Use Node.js current version
         uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238
         with:
-          node-version: current
+          node-version: lts/Krypton
 
       - name: Install package dependencies
         run: npm ci
@@ -33,4 +32,4 @@ jobs:
       - name: Run Semantic Release to version and publish the action
         run: npx semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
