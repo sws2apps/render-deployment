@@ -23,7 +23,7 @@
     "start-server": "node backend/index.js"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/changelog": "^7.0.0",
     "@semantic-release/git": "^10.0.1",
     "express": "^5.2.1"
   }
