@@ -26,16 +26,21 @@ runs:
 
     - name: Install Render CLI
       shell: bash
+      env:
+        CLI_VERSION: ${{ inputs.cli-version }}
       run: |
-        curl -fsSL https://raw.githubusercontent.com/render-oss/cli/refs/tags/v${{ inputs.cli-version }}/bin/install.sh | sh
+        curl -fsSL "https://raw.githubusercontent.com/render-oss/cli/refs/tags/v${CLI_VERSION}/bin/install.sh" -o install-render-cli.sh
+        sh install-render-cli.sh
+        rm -f install-render-cli.sh
 
     - name: Trigger deploy with Render CLI
       shell: bash
       env:
         RENDER_API_KEY: ${{ inputs.apiKey }}
+        SERVICE_ID: ${{ inputs.serviceId }}
         CI: true
       run: |
-        render deploys create ${{ inputs.serviceId }} --output text --confirm --wait
+        render deploys create "$SERVICE_ID" --output text --confirm --wait
 
 branding:
   icon: 'play-circle'
