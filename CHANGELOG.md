@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/sws2apps/render-deployment/compare/v2.1.0...v2.1.1) (2026-09-19)
+
+
+### Bug Fixes
+
+* **action:** sanitize shell/subprocess call in action.yaml ([bda8c38](https://github.com/sws2apps/render-deployment/commit/bda8c389448d2f73011a732a266f7a7fb2319dbf))
+
 # [2.1.0](https://github.com/sws2apps/render-deployment/compare/v2.0.0...v2.1.0) (2026-02-21)
 
 
